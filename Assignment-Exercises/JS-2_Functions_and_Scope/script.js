@@ -4,6 +4,8 @@
  - Assign any values you like.
 ********************/
 
+globalVar = 'apple';
+anotherGlobalVar = 'orange';
 
 /********************
  Step 2: Create a Function to Demonstrate Function Scope
@@ -14,13 +16,19 @@
    3. Return a string that includes both the global and local variables.
 ********************/
 
+function demoFunctionScope(){
+  localVar = 10;
+  console.log(`I ate ${globalVar}. Maybe that could total to ${localVar}`)
+}
+
+demoFunctionScope()
 
 /********************
  Step 3: Call the Function and Log Its Return Value
  - Call your function from Step 2 and store its result in a variable.
  - Use console.log() to display the return value in the console.
 ********************/
-
+console.log(localVar)
 
 /********************
  Step 4: Demonstrate Block Scope
@@ -30,3 +38,9 @@
    2. Log the block-scoped variable within the block.
  - Try logging the same variable outside the block and observe what happens.
 ********************/
+
+if (true) {
+  let blockVar = "Mango";
+}
+
+console.log(blockVar)
